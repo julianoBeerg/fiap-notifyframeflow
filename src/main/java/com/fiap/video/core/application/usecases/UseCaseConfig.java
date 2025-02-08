@@ -1,7 +1,7 @@
 package com.fiap.video.core.application.usecases;
 
-import com.fiap.video.EmailService;
-import com.fiap.video.S3Service;
+import com.fiap.video.infraestructure.service.EmailService;
+import com.fiap.video.infraestructure.service.S3Service;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

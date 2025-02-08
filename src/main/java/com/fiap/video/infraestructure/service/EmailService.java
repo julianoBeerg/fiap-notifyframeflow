@@ -1,5 +1,6 @@
-package com.fiap.video;
+package com.fiap.video.infraestructure.service;
 
+import com.fiap.video.core.application.exception.EmailSendingException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -13,16 +14,19 @@ import java.util.Properties;
 @Service
 public class EmailService {
 
-    @Value("${rmtp.email}")
-    private String rmtpEmail;
+    private final String smtpEmail;
+    private final String smtpPassword;
 
-    @Value("${rmtp.password}")
-    private String rmtpPassword;
+    public EmailService(@Value("${smtp.email}") String smtpEmail,
+                        @Value("${smtp.password}") String smtpPassword) {
+        this.smtpEmail = smtpEmail;
+        this.smtpPassword = smtpPassword;
+    }
 
 
     public void sendEmail(String to, String subject, String body, byte[] attachment, String zipKeyS3) {
         String host = "smtp.gmail.com";
-        String from = rmtpEmail;
+        String from = smtpEmail;
         Properties properties = new Properties();
         properties.put("mail.smtp.host", host);
         properties.put("mail.smtp.port", "587");
@@ -32,7 +36,7 @@ public class EmailService {
         Session session = Session.getInstance(properties, new Authenticator() {
             @Override
             protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication(rmtpEmail, rmtpPassword);
+                return new PasswordAuthentication(smtpEmail, smtpPassword);
             }
         });
 
@@ -42,22 +46,18 @@ public class EmailService {
             message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
             message.setSubject(subject);
 
-            // Corpo do e-mail
             MimeBodyPart textPart = new MimeBodyPart();
             textPart.setText(body);
 
-            // Anexo (se presente)
             Multipart multipart = new MimeMultipart();
             multipart.addBodyPart(textPart);
 
             if (attachment != null) {
                 MimeBodyPart attachmentPart = new MimeBodyPart();
-                // Criando o anexo com os bytes do arquivo e o nome do arquivo baseado no zipKeyS3
                 DataSource source = new ByteArrayDataSource(attachment, "application/zip");
                 attachmentPart.setDataHandler(new DataHandler(source));
 
-                // Usando o nome do arquivo como o nome do anexo (basename do zipKeyS3)
-                String fileName = zipKeyS3.substring(zipKeyS3.lastIndexOf("/") + 1); // Pega o nome do arquivo
+                String fileName = zipKeyS3.substring(zipKeyS3.lastIndexOf("/") + 1);
                 attachmentPart.setFileName(fileName);
 
                 multipart.addBodyPart(attachmentPart);
@@ -66,7 +66,8 @@ public class EmailService {
             message.setContent(multipart);
             Transport.send(message);
         } catch (MessagingException e) {
-            throw new RuntimeException("Erro ao enviar e-mail", e);
+            throw new EmailSendingException("Erro ao enviar e-mail", e);
         }
+
     }
 }

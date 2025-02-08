@@ -1,11 +1,9 @@
-package com.fiap.video.infraestructure.listener;
+package com.fiap.video.infraestructure.subscriber;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fiap.video.core.application.enums.VideoStatus;
 import com.fiap.video.core.application.usecases.CompletedEmailUseCase;
 import com.fiap.video.core.application.usecases.ErrorEmailUseCase;
 import com.fiap.video.core.domain.VideoMessage;
-import io.awspring.cloud.sqs.annotation.SqsListener;
 import lombok.extern.slf4j.Slf4j;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,21 +12,19 @@ import org.springframework.stereotype.Service;
 
 @Slf4j
 @Service
-public class SqsConsumer {
+public class SQSSubscriber {
 
-    private final ObjectMapper objectMapper;
     private final CompletedEmailUseCase completedEmailUseCase;
     private final ErrorEmailUseCase errorEmailUseCase;
 
     @Autowired
-    public SqsConsumer(ObjectMapper objectMapper, CompletedEmailUseCase completedEmailUseCase, ErrorEmailUseCase errorEmailUseCase) {
-        this.objectMapper = objectMapper;
+    public SQSSubscriber(CompletedEmailUseCase completedEmailUseCase, ErrorEmailUseCase errorEmailUseCase) {
         this.completedEmailUseCase = completedEmailUseCase;
         this.errorEmailUseCase = errorEmailUseCase;
     }
 
-    @SqsListener("${spring.cloud.aws.sqs.queue-name}")
-    public void recieveMessage(Message<String> message) {
+    @io.awspring.cloud.sqs.annotation.SqsListener("${spring.cloud.aws.sqs.queue-name}")
+    public void receiveMessage(Message<String> message) {
         String content = message.getPayload();
         if (content == null) {
             log.error("Received null content from SQS");

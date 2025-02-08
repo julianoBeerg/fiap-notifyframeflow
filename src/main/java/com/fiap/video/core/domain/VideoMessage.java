@@ -10,7 +10,6 @@ public class VideoMessage {
     private String email;
     private String status;
 
-    // Getters and setters
     public String getZipKeyS3() {
         return zipKeyS3;
     }
