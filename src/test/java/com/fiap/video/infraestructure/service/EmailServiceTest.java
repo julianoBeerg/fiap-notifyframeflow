@@ -1,6 +1,7 @@
 package com.fiap.video.infraestructure.service;
 
 import com.fiap.video.core.application.exception.EmailSendingException;
+import com.fiap.video.core.service.EmailService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

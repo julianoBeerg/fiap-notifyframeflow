@@ -1,4 +1,4 @@
-package com.fiap.video.infraestructure.service;
+package com.fiap.video.core.service;
 
 
 import com.fiap.video.config.S3Config;

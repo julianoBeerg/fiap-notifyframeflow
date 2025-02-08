@@ -1,8 +1,8 @@
 package com.fiap.video.core.application.usecases;
 
-import com.fiap.video.infraestructure.service.EmailService;
+import com.fiap.video.core.service.EmailService;
 import com.fiap.video.core.utils.FileToByteArray;
-import com.fiap.video.infraestructure.service.S3Service;
+import com.fiap.video.core.service.S3Service;
 import com.fiap.video.core.domain.VideoMessage;
 import org.springframework.stereotype.Service;
 

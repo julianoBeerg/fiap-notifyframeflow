@@ -1,7 +1,7 @@
 package com.fiap.video.core.application.usecases;
 
-import com.fiap.video.infraestructure.service.EmailService;
-import com.fiap.video.infraestructure.service.S3Service;
+import com.fiap.video.core.service.EmailService;
+import com.fiap.video.core.service.S3Service;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
