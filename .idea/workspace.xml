@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8cd182f1-0d68-48c4-8a02-1200ed43c496" name="Changes" comment="Initial commit">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/fiap/video/core/application/usecases/UseCaseConfigTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/fiap/video/core/application/usecases/UseCaseConfigTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +48,7 @@
     "JUnit.S3ServiceTest.executor": "Run",
     "JUnit.S3ServiceTest.shouldThrowVideoDownloadExceptionWhenDownloadFails.executor": "Run",
     "JUnit.SQSSubscriberTest.executor": "Coverage",
-    "JUnit.UseCaseConfigTest.executor": "Debug",
+    "JUnit.UseCaseConfigTest.executor": "Run",
     "JUnit.VideoDownloadExceptionTest.executor": "Run",
     "JUnit.com.fiap.video in fiap-notifyframeflow.executor": "Coverage",
     "JUnit.infraestructure in fiap-notifyframeflow.executor": "Coverage",
@@ -86,7 +86,7 @@
       <recent name="com.fiap.video.infraestructure.listener" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UseCaseConfigTest">
+  <component name="RunManager" selected="JUnit.FileToByteArrayTest">
     <configuration name="All in fiap-notifyframeflow" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="fiap-notifyframeflow" />
       <option name="PACKAGE_NAME" value="" />
@@ -95,17 +95,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FileToByteArrayTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="fiap-notifyframeflow" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.fiap.video.*" />
+          <option name="PATTERN" value="com.fiap.video.core.utils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.fiap.video" />
-      <option name="MAIN_CLASS_NAME" value="com.fiap.video.MainTest" />
+      <option name="PACKAGE_NAME" value="com.fiap.video.core.utils" />
+      <option name="MAIN_CLASS_NAME" value="com.fiap.video.core.utils.FileToByteArrayTest" />
       <option name="TEST_OBJECT" value="class" />
+      <dir value="$PROJECT_DIR$/src/test/java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -143,11 +144,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UseCaseConfigTest" />
+        <item itemvalue="JUnit.FileToByteArrayTest" />
         <item itemvalue="JUnit.java in fiap-notifyframeflow" />
+        <item itemvalue="JUnit.UseCaseConfigTest" />
         <item itemvalue="JUnit.video in fiap-notifyframeflow" />
         <item itemvalue="JUnit.All in fiap-notifyframeflow" />
-        <item itemvalue="JUnit.MainTest" />
       </list>
     </recent_temporary>
   </component>
@@ -183,7 +184,7 @@
     <SUITE FILE_PATH="coverage/fiap_notifyframeflow$FileToByteArrayTest.ic" NAME="FileToByteArrayTest Coverage Results" MODIFIED="1738978265461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.fiap.video.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/fiap_notifyframeflow$java_in_fiap_notifyframeflow.ic" NAME="java in fiap-notifyframeflow Coverage Results" MODIFIED="1738978667590" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/fiap_notifyframeflow$java_in_fiap_notifyframeflow.ic" NAME="java in fiap-notifyframeflow Coverage Results" MODIFIED="1739061108254" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/fiap_notifyframeflow$com_fiap_video_in_fiap_notifyframeflow.ic" NAME="com.fiap.video in fiap-notifyframeflow Coverage Results" MODIFIED="1738977058002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.fiap.video.*</FILTER>
     </SUITE>
