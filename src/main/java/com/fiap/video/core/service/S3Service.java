@@ -39,6 +39,8 @@ public class S3Service {
                     outputStream.write(buffer, 0, bytesRead);
                 }
             }
+            
+            tempFile.deleteOnExit();
             return tempFile;
         } catch (Exception e) {
             throw new VideoDownloadException("Erro ao baixar vídeo do S3", e);
