@@ -1,5 +1,6 @@
-package com.fiap.video.core.application.usecases;
+package com.fiap.video.application.usecases;
 
+import com.fiap.video.application.usecases.ErrorEmailUseCase;
 import com.fiap.video.core.service.EmailService;
 import com.fiap.video.core.domain.VideoMessage;
 import org.junit.jupiter.api.BeforeEach;

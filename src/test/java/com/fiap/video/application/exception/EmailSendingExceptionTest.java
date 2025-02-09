@@ -1,5 +1,6 @@
-package com.fiap.video.core.application.exception;
+package com.fiap.video.application.exception;
 
+import com.fiap.video.application.exception.EmailSendingException;
 import org.junit.jupiter.api.Test;
 import javax.mail.MessagingException;
 

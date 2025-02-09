@@ -1,5 +1,6 @@
-package com.fiap.video.config;
+package com.fiap.video.infraestructure.config.config;
 
+import com.fiap.video.infraestructure.config.S3Config;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;

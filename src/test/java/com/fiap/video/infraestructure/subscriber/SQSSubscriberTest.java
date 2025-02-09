@@ -1,6 +1,6 @@
 package com.fiap.video.infraestructure.subscriber;
-import com.fiap.video.core.application.usecases.CompletedEmailUseCase;
-import com.fiap.video.core.application.usecases.ErrorEmailUseCase;
+import com.fiap.video.application.usecases.CompletedEmailUseCase;
+import com.fiap.video.application.usecases.ErrorEmailUseCase;
 import com.fiap.video.core.domain.VideoMessage;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

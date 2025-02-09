@@ -1,5 +1,6 @@
-package com.fiap.video.core.application.exception;
+package com.fiap.video.application.exception;
 
+import com.fiap.video.application.exception.VideoDownloadException;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

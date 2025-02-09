@@ -1,4 +1,4 @@
-package com.fiap.video.config;
+package com.fiap.video.infraestructure.config;
 
 import lombok.Getter;
 import lombok.Setter;

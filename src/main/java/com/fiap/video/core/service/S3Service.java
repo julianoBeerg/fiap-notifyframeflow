@@ -1,8 +1,8 @@
 package com.fiap.video.core.service;
 
 
-import com.fiap.video.config.S3Config;
-import com.fiap.video.core.application.exception.VideoDownloadException;
+import com.fiap.video.infraestructure.config.S3Config;
+import com.fiap.video.application.exception.VideoDownloadException;
 import com.fiap.video.core.domain.VideoMessage;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;

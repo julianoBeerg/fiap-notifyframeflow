@@ -1,8 +1,8 @@
 package com.fiap.video.infraestructure.subscriber;
 
-import com.fiap.video.core.application.enums.VideoStatus;
-import com.fiap.video.core.application.usecases.CompletedEmailUseCase;
-import com.fiap.video.core.application.usecases.ErrorEmailUseCase;
+import com.fiap.video.application.enums.VideoStatus;
+import com.fiap.video.application.usecases.CompletedEmailUseCase;
+import com.fiap.video.application.usecases.ErrorEmailUseCase;
 import com.fiap.video.core.domain.VideoMessage;
 import lombok.extern.slf4j.Slf4j;
 import org.json.JSONObject;

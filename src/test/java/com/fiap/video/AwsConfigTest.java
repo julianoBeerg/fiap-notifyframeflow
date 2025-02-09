@@ -1,6 +1,6 @@
 package com.fiap.video;
-import com.fiap.video.config.S3Config;
-import com.fiap.video.core.application.exception.VideoDownloadException;
+import com.fiap.video.infraestructure.config.S3Config;
+import com.fiap.video.application.exception.VideoDownloadException;
 import com.fiap.video.core.domain.VideoMessage;
 import com.fiap.video.core.service.S3Service;
 import org.junit.jupiter.api.BeforeEach;

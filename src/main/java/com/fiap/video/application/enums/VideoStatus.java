@@ -1,4 +1,4 @@
-package com.fiap.video.core.application.enums;
+package com.fiap.video.application.enums;
 
 public enum VideoStatus {
     PENDING,

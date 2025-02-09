@@ -1,6 +1,7 @@
 package com.fiap.video.core.service;
 
-import com.fiap.video.core.application.exception.EmailSendingException;
+import com.fiap.video.application.exception.EmailSendingException;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -12,6 +13,7 @@ import javax.mail.util.ByteArrayDataSource;
 import java.util.Properties;
 
 @Service
+@Slf4j
 public class EmailService {
 
     private final String smtpEmail;
@@ -65,6 +67,7 @@ public class EmailService {
 
             message.setContent(multipart);
             Transport.send(message);
+            log.info("E-mail enviado com sucesso para: {}", (Object) message.getAllRecipients());
         } catch (MessagingException e) {
             throw new EmailSendingException("Erro ao enviar e-mail", e);
         }

@@ -1,4 +1,4 @@
-package com.fiap.video.config;
+package com.fiap.video.infraestructure.config;
 import com.amazonaws.auth.AWSStaticCredentialsProvider;
 import com.amazonaws.auth.BasicSessionCredentials;
 import com.amazonaws.services.sns.AmazonSNS;
