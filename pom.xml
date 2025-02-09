@@ -26,8 +26,8 @@
         <maven.compiler.target>21</maven.compiler.target>
         <maven.compiler.release>21</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <sonar.organization>Frame-flow</sonar.organization>
-        <sonar.projectKey>Frame-flow_notifyFrameFlow</sonar.projectKey>
+        <sonar.organization>frame-flow</sonar.organization>
+        <sonar.projectKey>frame-flow_notifyFrameFlow</sonar.projectKey>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
 
