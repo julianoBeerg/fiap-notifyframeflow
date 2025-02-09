@@ -22,9 +22,9 @@ spec:
         app: notify-frame-flow
     spec:
       containers:
+        - name: notify-frame-flow  # ✅ Corrigido (agora está dentro de uma lista)
           image: ${REPO_ECR}
           imagePullPolicy: IfNotPresent
-          name: notify-frame-flow
           resources:
             requests:
               cpu: 100m
