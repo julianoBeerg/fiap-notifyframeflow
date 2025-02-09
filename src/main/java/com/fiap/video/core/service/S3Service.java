@@ -19,6 +19,8 @@ public class S3Service {
     @Value("${aws.s3.bucketZip}")
     private String bucketZipName;
 
+    private File tempFile;
+
     public S3Service(S3Config s3Config) {
         this.s3Config = s3Config;
     }
@@ -30,7 +32,7 @@ public class S3Service {
                     .key(videoMessage.getZipKeyS3())
                     .build();
 
-            File tempFile = Files.createTempFile("video", ".mp4").toFile();
+            tempFile = Files.createTempFile("video", ".mp4").toFile();
             try (InputStream inputStream = s3Config.getS3Client().getObject(request);
                  FileOutputStream outputStream = new FileOutputStream(tempFile)) {
                 byte[] buffer = new byte[1024];
@@ -39,6 +41,8 @@ public class S3Service {
                     outputStream.write(buffer, 0, bytesRead);
                 }
             }
+            tempFile.deleteOnExit();
+
             return tempFile;
         } catch (Exception e) {
             throw new VideoDownloadException("Erro ao baixar vídeo do S3", e);
