@@ -48,7 +48,7 @@ jobs:
              --from-literal=SQS_QUEUE="${{ secrets.SQS_QUEUE }}" \
              --from-literal=S3_BUCKET_ZIP="${{ secrets.S3_BUCKET_ZIP }}" \
              --from-literal=SMTP_EMAIL="${{ secrets.SMTP_EMAIL }}" \
-             --from-literal=SMTP_PASSWORD="${{ secrets.SMTP_PASSWORD }}" \   
+             --from-literal=SMTP_PASSWORD="${{ secrets.SMTP_PASSWORD }}" \
              --from-literal=AWS_ACCESS_KEY_ID="${{ secrets.AWS_ACCESS_KEY_ID }}" \
              --from-literal=AWS_SECRET_ACCESS_KEY="${{ secrets.AWS_SECRET_ACCESS_KEY }}" \
              --from-literal=AWS_SESSION_TOKEN=${{ secrets.AWS_SESSION_TOKEN }} \
