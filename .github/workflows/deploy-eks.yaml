@@ -32,7 +32,7 @@ jobs:
       - name: Package & Tag
         run: | 
           docker compose -f Docker/docker-compose.yml build web --no-cache
-          docker tag frameflow-ecr:latest 090111931170.dkr.ecr.us-east-1.amazonaws.com/frameflow-ecr:latest
+          docker tag notify-frame-flow:latest 090111931170.dkr.ecr.us-east-1.amazonaws.com/frameflow-ecr:latest
           docker ps
 
       - name: Push to ECR
