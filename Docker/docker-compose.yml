@@ -1,0 +1,21 @@
+
+services:
+  web:
+    build:
+      context: ..
+      dockerfile: Docker/Dockerfile
+    image: notify-frame-flow
+    container_name: notify-frame-flow
+    restart: always
+    ports:
+      - "8787:8080"
+    networks:
+      - sql_network
+    environment:
+      - AWS_REGION=us-east-1
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_SESSION_TOKEN=${AWS_SESSION_TOKEN}
+networks:
+  sql_network:
+    driver: bridge

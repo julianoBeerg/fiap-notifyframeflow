@@ -4,32 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8cd182f1-0d68-48c4-8a02-1200ed43c496" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fiap/video/core/application/exception/EmailSendingException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fiap/video/core/application/exception/VideoDownloadException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/fiap/video/config/S3ConfigTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/fiap/video/core/application/exception/CompletedEmailUseCaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/fiap/video/core/application/exception/EmailSendingExceptionTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/fiap/video/core/application/exception/VideoDownloadExceptionTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/fiap/video/core/application/usecases/CompletedEmailUseCaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/fiap/video/core/application/usecases/ErrorEmailUseCaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/fiap/video/core/application/usecases/UseCaseConfigTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/fiap/video/core/utils/FileToByteArrayTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/fiap/video/infraestructure/service/EmailServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/fiap/video/infraestructure/subscriber/SQSSubscriberTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="8cd182f1-0d68-48c4-8a02-1200ed43c496" name="Changes" comment="Initial commit">
+      <change afterPath="$PROJECT_DIR$/Docker/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Docker/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/deployment-db.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/deployment-notify-frame-flow.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/hpa-burguer-app.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/metrics.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/service-burguer-app.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/stress.bash" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fiap/video/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fiap/video/infraestructure/service/EmailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fiap/video/FileToByteArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fiap/video/core/utils/FileToByteArray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fiap/video/S3Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fiap/video/infraestructure/service/S3Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fiap/video/config/ConfigS3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fiap/video/config/S3Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fiap/video/core/application/usecases/CompletedEmailUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fiap/video/core/application/usecases/CompletedEmailUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fiap/video/core/application/usecases/ErrorEmailUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fiap/video/core/application/usecases/ErrorEmailUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fiap/video/core/application/usecases/UseCaseConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fiap/video/core/application/usecases/UseCaseConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fiap/video/core/domain/SnsMessageWrapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fiap/video/core/domain/VideoMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fiap/video/core/domain/VideoMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fiap/video/infraestructure/listener/SqsConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fiap/video/infraestructure/subscriber/SQSSubscriber.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,6 +44,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "JUnit.All in fiap-notifyframeflow.executor": "Coverage",
     "JUnit.CompletedEmailUseCaseTest.executor": "Coverage",
     "JUnit.CompletedEmailUseCaseTest.shouldThrowIOExceptionWhenDownloadFails.executor": "Run",
     "JUnit.EmailSendingExceptionTest.executor": "Run",
@@ -67,6 +52,7 @@
     "JUnit.EmailServiceTest.shouldThrowExceptionWhenEmailFailsToSend.executor": "Run",
     "JUnit.ErrorEmailUseCaseTest.executor": "Coverage",
     "JUnit.FileToByteArrayTest.executor": "Coverage",
+    "JUnit.MainTest.executor": "Run",
     "JUnit.S3ConfigTest.executor": "Run",
     "JUnit.S3ServiceTest.executor": "Run",
     "JUnit.S3ServiceTest.shouldThrowVideoDownloadExceptionWhenDownloadFails.executor": "Run",
@@ -84,7 +70,7 @@
     "git-widget-placeholder": "main",
     "ignore.preview.features.used": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/dev/java projects/FrameFlowProject/fiap-notifyframeflow/src/test/java",
+    "last_opened_file_path": "C:/dev/java projects/FrameFlowProject/fiap-notifyframeflow",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -93,6 +79,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\dev\java projects\FrameFlowProject\fiap-notifyframeflow" />
       <recent name="C:\dev\java projects\FrameFlowProject\fiap-notifyframeflow\src\test\java" />
       <recent name="C:\dev\java projects\fiap-notifyframeflow\src\main\java\com\fiap\video" />
       <recent name="C:\dev\java projects\fiap-notifyframeflow\src\main\java\com\fiap\video\core\application\usecases" />
@@ -108,7 +95,7 @@
       <recent name="com.fiap.video.infraestructure.listener" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.video in fiap-notifyframeflow">
     <configuration name="All in fiap-notifyframeflow" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="fiap-notifyframeflow" />
       <option name="PACKAGE_NAME" value="" />
@@ -127,21 +114,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.fiap.video" />
       <option name="MAIN_CLASS_NAME" value="com.fiap.video.MainTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="S3ServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="fiap-notifyframeflow" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.fiap.video.infraestructure.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.fiap.video.infraestructure.service" />
-      <option name="MAIN_CLASS_NAME" value="com.fiap.video.infraestructure.service.S3ServiceTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -170,13 +142,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="video in fiap-notifyframeflow" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="fiap-notifyframeflow" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/com/fiap/video" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.video in fiap-notifyframeflow" />
         <item itemvalue="JUnit.All in fiap-notifyframeflow" />
         <item itemvalue="JUnit.java in fiap-notifyframeflow" />
         <item itemvalue="JUnit.MainTest" />
         <item itemvalue="JUnit.UseCaseConfigTest" />
-        <item itemvalue="JUnit.S3ServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -212,19 +192,20 @@
     <SUITE FILE_PATH="coverage/fiap_notifyframeflow$FileToByteArrayTest.ic" NAME="FileToByteArrayTest Coverage Results" MODIFIED="1738978265461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.fiap.video.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/fiap_notifyframeflow$java_in_fiap_notifyframeflow.ic" NAME="java in fiap-notifyframeflow Coverage Results" MODIFIED="1738978507306" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/fiap_notifyframeflow$java_in_fiap_notifyframeflow.ic" NAME="java in fiap-notifyframeflow Coverage Results" MODIFIED="1738978667590" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/fiap_notifyframeflow$com_fiap_video_in_fiap_notifyframeflow.ic" NAME="com.fiap.video in fiap-notifyframeflow Coverage Results" MODIFIED="1738977058002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.fiap.video.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/fiap_notifyframeflow$SQSSubscriberTest.ic" NAME="SQSSubscriberTest Coverage Results" MODIFIED="1738977855986" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.fiap.video.infrastructure.subscriber.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/fiap_notifyframeflow$All_in_fiap_notifyframeflow.ic" NAME="All in fiap-notifyframeflow Coverage Results" MODIFIED="1738978711227" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/fiap_notifyframeflow$ErrorEmailUseCaseTest.ic" NAME="ErrorEmailUseCaseTest Coverage Results" MODIFIED="1738977526291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.fiap.video.core.application.usecases.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/fiap_notifyframeflow$EmailServiceTest.ic" NAME="EmailServiceTest Coverage Results" MODIFIED="1738977981014" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.fiap.video.infraestructure.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/fiap_notifyframeflow$video_in_fiap_notifyframeflow.ic" NAME="video in fiap-notifyframeflow Coverage Results" MODIFIED="1738977424195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/fiap_notifyframeflow$video_in_fiap_notifyframeflow.ic" NAME="video in fiap-notifyframeflow Coverage Results" MODIFIED="1739056558407" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>
