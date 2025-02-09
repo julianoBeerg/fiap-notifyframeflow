@@ -51,7 +51,7 @@ class CompletedEmailUseCaseTest {
 
     @Test
     void shouldSendEmailWithAttachmentWhenVideoProcessingIsCompleted() throws IOException {
-        when(s3Service.downloadFile(videoMessage)).thenReturn(zipFile);
+        when(s3Service.downloadFile(videoMessage)).thenReturn(zipFile.toPath());
 
         try (MockedStatic<FileToByteArray> mockedStatic = mockStatic(FileToByteArray.class)) {
             mockedStatic.when(() -> FileToByteArray.convertFileToBytes(zipFile)).thenReturn(fileBytes);

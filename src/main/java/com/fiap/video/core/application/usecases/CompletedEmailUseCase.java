@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Path;
 
 @Service
 public class CompletedEmailUseCase {
@@ -22,8 +23,8 @@ public class CompletedEmailUseCase {
     }
 
     public void execute(VideoMessage videoMessage) throws IOException {
-        File zipFile = s3Service.downloadFile(videoMessage);
-        byte[] attachment = FileToByteArray.convertFileToBytes(zipFile);
+        Path zipFile = s3Service.downloadFile(videoMessage);
+        byte[] attachment = FileToByteArray.convertFileToBytes(zipFile.toFile());
         String subject = "Seu vídeo processado com sucesso";
         String body = """
                 Olá %s,
