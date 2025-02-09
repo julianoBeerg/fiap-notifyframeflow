@@ -1,5 +1,6 @@
 package com.fiap.video.config;
 
+import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -14,17 +15,21 @@ import software.amazon.awssdk.services.s3.S3Client;
 public class S3Config {
 
     @Setter
+    @Getter
     @Value("${aws.accessKeyId}")
     private String accessKeyId;
 
     @Setter
+    @Getter
     @Value("${aws.secretAccessKey}")
     private String secretAccessKey;
 
     @Setter
+    @Getter
     @Value("${aws.token}")
     private String token;
 
+    @Getter
     private final String regionName = Region.US_EAST_1.toString();
 
     @Bean

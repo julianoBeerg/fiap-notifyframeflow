@@ -11,8 +11,9 @@
 //
 //import static org.junit.jupiter.api.Assertions.assertNotNull;
 //
+//
 //@ExtendWith(SpringExtension.class)
-//@SpringBootTest
+//@SpringBootTest(properties = "spring.config.name=application-test")
 //class UseCaseConfigTest {
 //
 //    @Autowired
