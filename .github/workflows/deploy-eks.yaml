@@ -53,7 +53,7 @@ jobs:
       - name: Kube Apply
         if: ${{ github.ref_name == 'master' }} && github.event_name == 'push'
         run: |
-          kubectl delete -f k8s/metrics.yaml
+          kubectl delete -f k8s/metrics.yaml --ignore-not-found
           kubectl apply -f k8s/deployment-notify-frame-flow.yaml
           kubectl apply -f k8s/service-burguer-app.yaml
           kubectl apply -f k8s/hpa-burguer-app.yaml
