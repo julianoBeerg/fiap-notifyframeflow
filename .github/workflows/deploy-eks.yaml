@@ -43,7 +43,7 @@ jobs:
       - name: Kube Secrets
         if: ${{ github.ref_name == 'master' }} && github.event_name == 'push'
         run: |
-          # kubectl delete secret secret-frameflow --ignore-not-found
+          kubectl delete secret "secret-frameflow" --ignore-not-found
           kubectl create secret generic secret-frameflow \
              --from-literal=SQS_QUEUE="${{ secrets.SQS_QUEUE }}" \
              --from-literal=S3_BUCKET_ZIP="${{ secrets.S3_BUCKET_ZIP }}" \
