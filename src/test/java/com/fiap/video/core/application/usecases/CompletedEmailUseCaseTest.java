@@ -14,7 +14,6 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Path;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.*;
@@ -32,7 +31,7 @@ class CompletedEmailUseCaseTest {
     private CompletedEmailUseCase completedEmailUseCase;
 
     private VideoMessage videoMessage;
-    private Path zipFile;
+    private File zipFile;
     private byte[] fileBytes;
 
     @BeforeEach
@@ -46,7 +45,7 @@ class CompletedEmailUseCaseTest {
         videoMessage.setId("id123");
         videoMessage.setStatus("COMPLETED");
 
-        zipFile = mock(Path.class);
+        zipFile = mock(File.class);
         fileBytes = new byte[]{1, 2, 3};
     }
 
@@ -55,7 +54,7 @@ class CompletedEmailUseCaseTest {
         when(s3Service.downloadFile(videoMessage)).thenReturn(zipFile);
 
         try (MockedStatic<FileToByteArray> mockedStatic = mockStatic(FileToByteArray.class)) {
-            mockedStatic.when(() -> FileToByteArray.convertFileToBytes(zipFile.toFile())).thenReturn(fileBytes);
+            mockedStatic.when(() -> FileToByteArray.convertFileToBytes(zipFile)).thenReturn(fileBytes);
 
             completedEmailUseCase.execute(videoMessage);
 
