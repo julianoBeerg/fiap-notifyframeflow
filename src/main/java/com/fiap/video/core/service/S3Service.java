@@ -10,6 +10,8 @@ import software.amazon.awssdk.services.s3.model.GetObjectRequest;
 
 import java.io.*;
 import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.StandardOpenOption;
 
 @Service
 public class S3Service {
@@ -19,29 +21,28 @@ public class S3Service {
     @Value("${aws.s3.bucketZip}")
     private String bucketZipName;
 
-    private File tempFile;
-
     public S3Service(S3Config s3Config) {
         this.s3Config = s3Config;
     }
 
-    public File downloadFile(VideoMessage videoMessage) {
+    public Path downloadFile(VideoMessage videoMessage) {
         try {
+            Path tempDir = Files.createTempDirectory("secure_temp_dir");
+            Path tempFile = Files.createTempFile(tempDir, "video", ".mp4");
+
             GetObjectRequest request = GetObjectRequest.builder()
                     .bucket(bucketZipName)
                     .key(videoMessage.getZipKeyS3())
                     .build();
 
-            tempFile = Files.createTempFile("video", ".mp4").toFile();
             try (InputStream inputStream = s3Config.getS3Client().getObject(request);
-                 FileOutputStream outputStream = new FileOutputStream(tempFile)) {
+                 OutputStream outputStream = Files.newOutputStream(tempFile, StandardOpenOption.WRITE)) {
                 byte[] buffer = new byte[1024];
                 int bytesRead;
                 while ((bytesRead = inputStream.read(buffer)) != -1) {
                     outputStream.write(buffer, 0, bytesRead);
                 }
             }
-            tempFile.deleteOnExit();
 
             return tempFile;
         } catch (Exception e) {
