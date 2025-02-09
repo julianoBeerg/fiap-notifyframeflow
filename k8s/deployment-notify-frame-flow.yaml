@@ -46,6 +46,11 @@ spec:
                 secretKeyRef:
                   name: secret-frameflow
                   key: AWS_SESSION_TOKEN
+            - name: AWS_SESSION_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: secret-frameflow
+                  key: AWS_SESSION_TOKEN
           livenessProbe:
             httpGet:
               path: /manage/health

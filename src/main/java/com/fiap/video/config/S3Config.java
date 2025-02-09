@@ -30,6 +30,8 @@ public class S3Config {
     private String token;
 
     @Getter
+    @Value("${aws.region}")
+
     private final String regionName = Region.US_EAST_1.toString();
 
     @Bean

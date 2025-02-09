@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8cd182f1-0d68-48c4-8a02-1200ed43c496" name="Changes" comment="Initial commit" />
+    <list default="true" id="8cd182f1-0d68-48c4-8a02-1200ed43c496" name="Changes" comment="Initial commit">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/deploy-eks.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/deploy-eks.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docker/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Docker/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/deployment-notify-frame-flow.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deployment-notify-frame-flow.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fiap/video/config/S3Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fiap/video/config/S3Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -84,27 +90,33 @@
       <recent name="com.fiap.video.infraestructure.listener" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in fiap-notifyframeflow">
-    <configuration name="All in fiap-notifyframeflow" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.config in fiap-notifyframeflow">
+    <configuration name="CompletedEmailUseCaseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="fiap-notifyframeflow" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.fiap.video.core.application.usecases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.fiap.video.core.application.usecases" />
+      <option name="MAIN_CLASS_NAME" value="com.fiap.video.core.application.usecases.CompletedEmailUseCaseTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileToByteArrayTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="S3ConfigTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="fiap-notifyframeflow" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.fiap.video.core.utils.*" />
+          <option name="PATTERN" value="com.fiap.video.config.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.fiap.video.core.utils" />
-      <option name="MAIN_CLASS_NAME" value="com.fiap.video.core.utils.FileToByteArrayTest" />
+      <option name="PACKAGE_NAME" value="com.fiap.video.config" />
+      <option name="MAIN_CLASS_NAME" value="com.fiap.video.config.S3ConfigTest" />
       <option name="TEST_OBJECT" value="class" />
-      <dir value="$PROJECT_DIR$/src/test/java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -124,10 +136,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="java in fiap-notifyframeflow" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="config in fiap-notifyframeflow" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="fiap-notifyframeflow" />
       <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/src/test/java" />
+      <dir value="$PROJECT_DIR$/src/test/java/com/fiap/video/config" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -141,19 +153,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.All in fiap-notifyframeflow" />
-      <item itemvalue="JUnit.FileToByteArrayTest" />
-      <item itemvalue="JUnit.java in fiap-notifyframeflow" />
+      <item itemvalue="JUnit.CompletedEmailUseCaseTest" />
+      <item itemvalue="JUnit.S3ConfigTest" />
+      <item itemvalue="JUnit.config in fiap-notifyframeflow" />
       <item itemvalue="JUnit.UseCaseConfigTest" />
       <item itemvalue="JUnit.video in fiap-notifyframeflow" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.config in fiap-notifyframeflow" />
+        <item itemvalue="JUnit.CompletedEmailUseCaseTest" />
         <item itemvalue="JUnit.video in fiap-notifyframeflow" />
+        <item itemvalue="JUnit.S3ConfigTest" />
         <item itemvalue="JUnit.UseCaseConfigTest" />
-        <item itemvalue="JUnit.FileToByteArrayTest" />
-        <item itemvalue="JUnit.java in fiap-notifyframeflow" />
-        <item itemvalue="JUnit.All in fiap-notifyframeflow" />
       </list>
     </recent_temporary>
   </component>
