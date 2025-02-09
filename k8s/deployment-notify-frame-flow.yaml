@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
         - name: notify-frame-flow  # ✅ Corrigido (agora está dentro de uma lista)
-          image: ${REPO_ECR}
+          image: 090111931170.dkr.ecr.us-east-1.amazonaws.com/frameflow-ecr
           imagePullPolicy: IfNotPresent
           resources:
             requests:
