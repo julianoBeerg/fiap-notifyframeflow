@@ -5,15 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8cd182f1-0d68-48c4-8a02-1200ed43c496" name="Changes" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/Docker/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Docker/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s/deployment-db.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s/deployment-notify-frame-flow.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s/hpa-burguer-app.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s/metrics.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s/service-burguer-app.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s/stress.bash" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +86,7 @@
       <recent name="com.fiap.video.infraestructure.listener" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.video in fiap-notifyframeflow">
+  <component name="RunManager" selected="JUnit.UseCaseConfigTest">
     <configuration name="All in fiap-notifyframeflow" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="fiap-notifyframeflow" />
       <option name="PACKAGE_NAME" value="" />
@@ -152,11 +143,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UseCaseConfigTest" />
+        <item itemvalue="JUnit.java in fiap-notifyframeflow" />
         <item itemvalue="JUnit.video in fiap-notifyframeflow" />
         <item itemvalue="JUnit.All in fiap-notifyframeflow" />
-        <item itemvalue="JUnit.java in fiap-notifyframeflow" />
         <item itemvalue="JUnit.MainTest" />
-        <item itemvalue="JUnit.UseCaseConfigTest" />
       </list>
     </recent_temporary>
   </component>
