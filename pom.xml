@@ -5,11 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.fiap</groupId>
-    <artifactId>fiap-notifyframeflow</artifactId>
+    <artifactId>notifyframeflow</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
-
-    <name>FIAP Notification</name>
+    <name>notifyframeflow</name>
     <description>FIAP Notification about Videos status  </description>
 
     <parent>
@@ -27,6 +26,9 @@
         <maven.compiler.target>21</maven.compiler.target>
         <maven.compiler.release>21</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <sonar.organization>Frame-flow</sonar.organization>
+        <sonar.projectKey>Frame-flow_notifyFrameFlow</sonar.projectKey>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
 
     <dependencyManagement>

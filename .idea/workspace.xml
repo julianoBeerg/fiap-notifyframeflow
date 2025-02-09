@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8cd182f1-0d68-48c4-8a02-1200ed43c496" name="Changes" comment="Initial commit">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/deploy-eks.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/deploy-eks.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/deployment-notify-frame-flow.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deployment-notify-frame-flow.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/pipeline.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/pipeline.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +56,7 @@
     "JUnit.config in fiap-notifyframeflow.executor": "Coverage",
     "JUnit.infraestructure in fiap-notifyframeflow.executor": "Coverage",
     "JUnit.java in fiap-notifyframeflow.executor": "Coverage",
-    "JUnit.video in fiap-notifyframeflow.executor": "Run",
+    "JUnit.video in fiap-notifyframeflow.executor": "Coverage",
     "Maven.fiap-notifyframeflow [clean].executor": "Run",
     "Maven.fiap-notifyframeflow [install].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -89,7 +89,7 @@
       <recent name="com.fiap.video.infraestructure.listener" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.config in fiap-notifyframeflow">
+  <component name="RunManager" selected="JUnit.video in fiap-notifyframeflow">
     <configuration name="CompletedEmailUseCaseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="fiap-notifyframeflow" />
       <extension name="coverage">
@@ -160,9 +160,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.video in fiap-notifyframeflow" />
         <item itemvalue="JUnit.config in fiap-notifyframeflow" />
         <item itemvalue="JUnit.CompletedEmailUseCaseTest" />
-        <item itemvalue="JUnit.video in fiap-notifyframeflow" />
         <item itemvalue="JUnit.S3ConfigTest" />
         <item itemvalue="JUnit.UseCaseConfigTest" />
       </list>
@@ -218,6 +218,6 @@
     <SUITE FILE_PATH="coverage/fiap_notifyframeflow$EmailServiceTest.ic" NAME="EmailServiceTest Coverage Results" MODIFIED="1738977981014" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.fiap.video.infraestructure.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/fiap_notifyframeflow$video_in_fiap_notifyframeflow.ic" NAME="video in fiap-notifyframeflow Coverage Results" MODIFIED="1739108673208" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/fiap_notifyframeflow$video_in_fiap_notifyframeflow.ic" NAME="video in fiap-notifyframeflow Coverage Results" MODIFIED="1739109574658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>
