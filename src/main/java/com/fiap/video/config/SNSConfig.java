@@ -17,9 +17,9 @@ import software.amazon.awssdk.regions.Region;
 @Configuration
 public class SNSConfig {
 
-    @Setter
-    @Value("${aws.sns.topicArn}")
-    private String topicArn;
+//    @Setter
+//    @Value("${aws.sns.topicArn}")
+//    private String topicArn;
 
     @Setter
     @Value("${aws.accessKeyId}")
@@ -44,27 +44,27 @@ public class SNSConfig {
                 .withCredentials(new AWSStaticCredentialsProvider(credentials))
                 .build();
 
-        SetTopicAttributesRequest setTopicAttributesRequest = new SetTopicAttributesRequest()
-                .withTopicArn(topicArn)
-                .withAttributeName("ContentBasedDeduplication")
-                .withAttributeValue("true");
-
-        snsClient.setTopicAttributes(setTopicAttributesRequest);
+//        SetTopicAttributesRequest setTopicAttributesRequest = new SetTopicAttributesRequest()
+//                .withTopicArn(topicArn)
+//                .withAttributeName("ContentBasedDeduplication")
+//                .withAttributeValue("true");
+//
+//        snsClient.setTopicAttributes(setTopicAttributesRequest);
 
         return snsClient;
     }
 
-    @Bean(name = "productEventsTopic")
-    public Topic snsProductEventsTopic() {
-
-        GetTopicAttributesRequest getTopicAttributesRequest = new GetTopicAttributesRequest()
-                .withTopicArn(topicArn);
-        GetTopicAttributesResult getTopicAttributesResult = snsClient().getTopicAttributes(getTopicAttributesRequest);
-
-        String topicArn = getTopicAttributesResult.getAttributes().get("TopicArn");
-
-
-        return new Topic().withTopicArn(topicArn);
-    }
+//    @Bean(name = "productEventsTopic")
+//    public Topic snsProductEventsTopic() {
+//
+//        GetTopicAttributesRequest getTopicAttributesRequest = new GetTopicAttributesRequest()
+//                .withTopicArn(topicArn);
+//        GetTopicAttributesResult getTopicAttributesResult = snsClient().getTopicAttributes(getTopicAttributesRequest);
+//
+//        String topicArn = getTopicAttributesResult.getAttributes().get("TopicArn");
+//
+//
+//        return new Topic().withTopicArn(topicArn);
+//    }
 
 }
