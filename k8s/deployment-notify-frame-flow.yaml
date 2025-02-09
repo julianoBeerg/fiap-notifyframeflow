@@ -34,42 +34,42 @@ spec:
             - name: SQS_QUEUE
               valueFrom:
                 secretKeyRef:
-                  name: secret-frameflow-notify
+                  name: notify-secret-frameflow
                   key: SQS_QUEUE
             - name: S3_BUCKET_ZIP
               valueFrom:
                 secretKeyRef:
-                  name: secret-frameflow-notify
+                  name: notify-secret-frameflow
                   key: S3_BUCKET_ZIP
             - name: SMTP_EMAIL
               valueFrom:
                 secretKeyRef:
-                  name: secret-frameflow-notify
+                  name: notify-secret-frameflow
                   key: SMTP_EMAIL
             - name: SMTP_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: secret-frameflow-notify
+                  name: notify-secret-frameflow
                   key: SMTP_PASSWORD
             - name: AWS_ACCESS_KEY_ID
               valueFrom:
                 secretKeyRef:
-                  name: secret-frameflow-notify
+                  name: notify-secret-frameflow
                   key: AWS_ACCESS_KEY_ID
             - name: AWS_SECRET_ACCESS_KEY
               valueFrom:
                 secretKeyRef:
-                  name: secret-frameflow-notify
+                  name: notify-secret-frameflow
                   key: AWS_SECRET_ACCESS_KEY
             - name: AWS_SESSION_TOKEN
               valueFrom:
                 secretKeyRef:
-                  name: secret-frameflow-notify
+                  name: notify-secret-frameflow
                   key: AWS_SESSION_TOKEN
             - name: AWS_REGION
               valueFrom:
                 secretKeyRef:
-                  name: secret-frameflow-notify
+                  name: notify-secret-frameflow
                   key: AWS_REGION
           livenessProbe:
             httpGet:

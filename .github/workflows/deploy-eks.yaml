@@ -43,8 +43,8 @@ jobs:
       - name: Kube Secrets
         if: ${{ github.ref_name == 'master' }} && github.event_name == 'push'
         run: |
-          kubectl delete secret secret-frameflow-notify --ignore-not-found
-          kubectl create secret generic secret-frameflow-notify \
+          kubectl delete secret notify-secret-frameflow --ignore-not-found
+          kubectl create secret generic notify-secret-frameflow \
              --from-literal=SQS_QUEUE="${{ secrets.SQS_QUEUE }}" \
              --from-literal=S3_BUCKET_ZIP="${{ secrets.S3_BUCKET_ZIP }}" \
              --from-literal=SMTP_EMAIL="${{ secrets.SMTP_EMAIL }}" \
