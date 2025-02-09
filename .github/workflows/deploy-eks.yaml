@@ -8,7 +8,7 @@ on:
 
 env:
   REGION_DEFAULT: "us-east-1"
-  CLUSTER_NAME: "notify-frame-flow-eks-cluster"
+  CLUSTER_NAME: "frameFlow-eks-cluster"
 
 jobs:
   deploy:
