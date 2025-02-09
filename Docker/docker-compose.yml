@@ -12,10 +12,14 @@ services:
     networks:
       - sql_network
     environment:
-      - AWS_REGION=${AWS_REGION}
+      - SQS_QUEUE=${SQS_QUEUE}
+      - S3_BUCKET_ZIP=${S3_BUCKET_ZIP}
+      - SMTP_EMAIL=${SMTP_EMAIL}
+      - SMTP_PASSWORD=${SMTP_PASSWORD}
       - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
       - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
       - AWS_SESSION_TOKEN=${AWS_SESSION_TOKEN}
+      - AWS_REGION=${AWS_REGION}
 networks:
   sql_network:
     driver: bridge

@@ -31,6 +31,26 @@ spec:
           terminationMessagePath: /dev/termination-log
           terminationMessagePolicy: File
           env:
+            - name: SQS_QUEUE
+              valueFrom:
+                secretKeyRef:
+                  name: secret-frameflow
+                  key: SQS_QUEUE
+            - name: S3_BUCKET_ZIP
+              valueFrom:
+                secretKeyRef:
+                  name: secret-frameflow
+                  key: S3_BUCKET_ZIP
+            - name: SMTP_EMAIL
+              valueFrom:
+                secretKeyRef:
+                  name: secret-frameflow
+                  key: SMTP_EMAIL
+            - name: SMTP_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: secret-frameflow
+                  key: SMTP_PASSWORD
             - name: AWS_ACCESS_KEY_ID
               valueFrom:
                 secretKeyRef:
@@ -41,16 +61,16 @@ spec:
                 secretKeyRef:
                   name: secret-frameflow
                   key: AWS_SECRET_ACCESS_KEY
-            - name: AWS_REGION
-              valueFrom:
-                secretKeyRef:
-                  name: secret-frameflow
-                  key: AWS_REGION
             - name: AWS_SESSION_TOKEN
               valueFrom:
                 secretKeyRef:
                   name: secret-frameflow
                   key: AWS_SESSION_TOKEN
+            - name: AWS_REGION
+              valueFrom:
+                secretKeyRef:
+                  name: secret-frameflow
+                  key: AWS_REGION
           livenessProbe:
             httpGet:
               path: /manage/health
