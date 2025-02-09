@@ -14,6 +14,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Path;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.*;
@@ -31,7 +32,7 @@ class CompletedEmailUseCaseTest {
     private CompletedEmailUseCase completedEmailUseCase;
 
     private VideoMessage videoMessage;
-    private File zipFile;
+    private Path zipFile;
     private byte[] fileBytes;
 
     @BeforeEach
@@ -45,16 +46,16 @@ class CompletedEmailUseCaseTest {
         videoMessage.setId("id123");
         videoMessage.setStatus("COMPLETED");
 
-        zipFile = mock(File.class);
+        zipFile = mock(Path.class);
         fileBytes = new byte[]{1, 2, 3};
     }
 
     @Test
     void shouldSendEmailWithAttachmentWhenVideoProcessingIsCompleted() throws IOException {
-        when(s3Service.downloadFile(videoMessage)).thenReturn(zipFile.toPath());
+        when(s3Service.downloadFile(videoMessage)).thenReturn(zipFile);
 
         try (MockedStatic<FileToByteArray> mockedStatic = mockStatic(FileToByteArray.class)) {
-            mockedStatic.when(() -> FileToByteArray.convertFileToBytes(zipFile)).thenReturn(fileBytes);
+            mockedStatic.when(() -> FileToByteArray.convertFileToBytes(zipFile.toFile())).thenReturn(fileBytes);
 
             completedEmailUseCase.execute(videoMessage);
 
