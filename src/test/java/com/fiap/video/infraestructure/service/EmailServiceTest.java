@@ -29,7 +29,7 @@ class EmailServiceTest {
     }
 
     @Test
-    void shouldSendEmailSuccessfully() throws Exception {
+    void shouldSendEmailSuccessfully()  {
         try (MockedStatic<Transport> transportMock = Mockito.mockStatic(Transport.class)) {
             emailService.sendEmail("recipient@example.com", "Test Subject", "Test Body", null, null);
 

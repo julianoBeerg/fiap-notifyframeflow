@@ -5,7 +5,7 @@ import javax.mail.MessagingException;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class EmailSendingExceptionTest {
+ class EmailSendingExceptionTest {
 
     @Test
     void deveLancarEmailSendingException() {

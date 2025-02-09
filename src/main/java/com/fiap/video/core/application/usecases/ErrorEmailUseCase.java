@@ -5,7 +5,7 @@ import com.fiap.video.core.domain.VideoMessage;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ErrorEmailUseCase {
+public class    ErrorEmailUseCase {
 
     private final EmailService emailService;
 

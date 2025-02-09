@@ -1,10 +1,7 @@
-package com.fiap.video.infrastructure.subscriber;
-
-import com.fiap.video.core.application.enums.VideoStatus;
+package com.fiap.video.infraestructure.subscriber;
 import com.fiap.video.core.application.usecases.CompletedEmailUseCase;
 import com.fiap.video.core.application.usecases.ErrorEmailUseCase;
 import com.fiap.video.core.domain.VideoMessage;
-import com.fiap.video.infraestructure.subscriber.SQSSubscriber;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
