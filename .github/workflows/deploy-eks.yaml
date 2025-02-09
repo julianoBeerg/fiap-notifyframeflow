@@ -32,7 +32,7 @@ jobs:
       - name: Package & Tag
         run: | 
           docker compose -f Docker/docker-compose.yml build web --no-cache
-          docker tag payment-51-burguer-app:latest 992751745486.dkr.ecr.us-east-1.amazonaws.com/notify-frame-flow:latest
+          docker tag notify-frame-flow:latest 992751745486.dkr.ecr.us-east-1.amazonaws.com/notify-frame-flow:latest
           docker ps
 
       - name: Push to ECR
