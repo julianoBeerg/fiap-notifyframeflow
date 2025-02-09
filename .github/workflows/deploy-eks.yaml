@@ -1,0 +1,58 @@
+name: Deploy AWS Academy - EKS
+
+on:
+  workflow_run:
+    workflows: ["Java CI with Maven"]
+    types:
+      - completed
+
+env:
+  REGION_DEFAULT: "us-east-1"
+  CLUSTER_NAME: "notify-frame-flow-eks-cluster"
+
+jobs:
+  deploy:
+    name: Deploy AWS Academy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: AWS Configure
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
+          aws-region: ${{ env.REGION_DEFAULT }}
+
+      - name: Update Kube Config
+        run: aws eks update-kubeconfig --name ${{ env.CLUSTER_NAME }} --region ${{ env.REGION_DEFAULT }}
+
+      - name: Package & Tag
+        run: | 
+          docker compose -f Docker/docker-compose.yml build web --no-cache
+          docker tag payment-51-burguer-app:latest 992751745486.dkr.ecr.us-east-1.amazonaws.com/notify-frame-flow:latest
+          docker ps
+
+      - name: Push to ECR
+        run: |
+          aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 992751745486.dkr.ecr.us-east-1.amazonaws.com
+          docker push 992751745486.dkr.ecr.us-east-1.amazonaws.com/notify-frame-flow:latest
+          
+      - name: Kube Secrets
+        if: ${{ github.ref_name == 'master' }} && github.event_name == 'push'
+        run: |
+         kubectl create secret generic secret-burguer51 \
+            --from-literal=AWS_ACCESS_KEY_ID="${{ secrets.AWS_ACCESS_KEY_ID }}" \
+            --from-literal=AWS_SECRET_ACCESS_KEY="${{ secrets.AWS_SECRET_ACCESS_KEY }}" \
+            --from-literal=AWS_SESSION_TOKEN=${{ secrets.AWS_SESSION_TOKEN }} \
+            --from-literal=REPO_ECR=${{ secrets.REPO_ECR }} 
+            
+      - name: Kube Apply
+        if: ${{ github.ref_name == 'master' }} && github.event_name == 'push'
+        run: |
+          kubectl apply -f k8s/metrics.yaml
+          kubectl apply -f k8s/deployment-notify-frame-flow.yaml
+          kubectl apply -f k8s/service-burguer-app.yaml
+          kubectl apply -f k8s/hpa-burguer-app.yaml
