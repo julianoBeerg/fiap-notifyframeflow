@@ -47,8 +47,7 @@ jobs:
          kubectl create secret generic secret-frameflow \
             --from-literal=AWS_ACCESS_KEY_ID="${{ secrets.AWS_ACCESS_KEY_ID }}" \
             --from-literal=AWS_SECRET_ACCESS_KEY="${{ secrets.AWS_SECRET_ACCESS_KEY }}" \
-            --from-literal=AWS_SESSION_TOKEN=${{ secrets.AWS_SESSION_TOKEN }} \
-            --from-literal=REPO_ECR=${{ secrets.REPO_ECR }} 
+            --from-literal=AWS_SESSION_TOKEN=${{ secrets.AWS_SESSION_TOKEN }}
             
       - name: Kube Apply
         if: ${{ github.ref_name == 'master' }} && github.event_name == 'push'
