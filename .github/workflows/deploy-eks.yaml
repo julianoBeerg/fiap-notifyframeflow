@@ -32,13 +32,13 @@ jobs:
       - name: Package & Tag
         run: | 
           docker compose -f Docker/docker-compose.yml build web --no-cache
-          docker tag notify-frame-flow:latest 992751745486.dkr.ecr.us-east-1.amazonaws.com/notify-frame-flow:latest
+          docker tag frameflow-ecr:latest 090111931170.dkr.ecr.us-east-1.amazonaws.com/frameflow-ecr:latest
           docker ps
 
       - name: Push to ECR
         run: |
-          aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 992751745486.dkr.ecr.us-east-1.amazonaws.com
-          docker push 992751745486.dkr.ecr.us-east-1.amazonaws.com/notify-frame-flow:latest
+          aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 090111931170.dkr.ecr.us-east-1.amazonaws.com
+          docker push 090111931170.dkr.ecr.us-east-1.amazonaws.com/frameflow-ecr:latest
           
       - name: Kube Secrets
         if: ${{ github.ref_name == 'master' }} && github.event_name == 'push'
@@ -53,7 +53,7 @@ jobs:
       - name: Kube Apply
         if: ${{ github.ref_name == 'master' }} && github.event_name == 'push'
         run: |
-          kubectl delete -f k8s/metrics.yaml --ignore-not-found=true
+          kubectl delete -f k8s/metrics.yaml
           kubectl apply -f k8s/deployment-notify-frame-flow.yaml
           kubectl apply -f k8s/service-burguer-app.yaml
           kubectl apply -f k8s/hpa-burguer-app.yaml
