@@ -30,7 +30,6 @@ public class S3Service {
                     .key(videoMessage.getZipKeyS3())
                     .build();
 
-            //NOSONAR
             File tempFile = Files.createTempFile("video", ".mp4").toFile();
             try (InputStream inputStream = s3Config.getS3Client().getObject(request);
                  FileOutputStream outputStream = new FileOutputStream(tempFile)) {
