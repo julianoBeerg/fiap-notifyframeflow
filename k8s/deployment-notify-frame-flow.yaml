@@ -41,11 +41,11 @@ spec:
                 secretKeyRef:
                   name: secret-frameflow
                   key: AWS_SECRET_ACCESS_KEY
-            - name: AWS_SESSION_TOKEN
+            - name: AWS_REGION
               valueFrom:
                 secretKeyRef:
                   name: secret-frameflow
-                  key: AWS_SESSION_TOKEN
+                  key: AWS_REGION
             - name: AWS_SESSION_TOKEN
               valueFrom:
                 secretKeyRef:
