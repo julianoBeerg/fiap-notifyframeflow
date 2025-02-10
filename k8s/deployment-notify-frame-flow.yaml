@@ -74,19 +74,19 @@ spec:
           livenessProbe:
             httpGet:
               path: /manage/health
-              port: 8787
+              port: 80
               httpHeaders:
                 - name: Custom-Header
                   value: Awesome
-            initialDelaySeconds: 120
+            initialDelaySeconds: 100
             periodSeconds: 10
             timeoutSeconds: 5
             failureThreshold: 3
           readinessProbe:
             httpGet:
               path: /manage/health
-              port: 8787
-            initialDelaySeconds: 120
+              port: 80
+            initialDelaySeconds: 100
             periodSeconds: 10
             timeoutSeconds: 5
             failureThreshold: 3
