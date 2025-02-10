@@ -26,6 +26,7 @@ public class SQSSubscriber {
     @io.awspring.cloud.sqs.annotation.SqsListener("${spring.cloud.aws.sqs.queue-name}")
     public void receiveMessage(Message<String> message) {
         String content = message.getPayload();
+        log.error("Received null content from SQS");
         if (content == null) {
             log.error("Received null content from SQS");
             return;
