@@ -73,19 +73,23 @@ spec:
                   key: AWS_REGION
           livenessProbe:
             httpGet:
-              path: /manage/health
-              port: 80
+              path: /manage/health/liveness
+              port: 8787
               httpHeaders:
                 - name: Custom-Header
                   value: Awesome
-            initialDelaySeconds: 30
-            periodSeconds: 3
+            initialDelaySeconds: 60
+            periodSeconds: 10
+            timeoutSeconds: 5
+            failureThreshold: 3
           readinessProbe:
             httpGet:
-              path: /manage/health
-              port: 80
-            initialDelaySeconds: 30
-            periodSeconds: 3
+              path: /manage/health/readiness
+              port: 8787
+            initialDelaySeconds: 60
+            periodSeconds: 10
+            timeoutSeconds: 5
+            failureThreshold: 3
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       schedulerName: default-scheduler
