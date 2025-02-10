@@ -73,7 +73,7 @@ spec:
                   key: AWS_REGION
           livenessProbe:
             httpGet:
-              path: /actuator/health/liveness
+              path: /manage/health
               port: 8787
               httpHeaders:
                 - name: Custom-Header
@@ -84,7 +84,7 @@ spec:
             failureThreshold: 3
           readinessProbe:
             httpGet:
-              path: /actuator/health/readiness
+              path: /manage/health
               port: 8787
             initialDelaySeconds: 120
             periodSeconds: 10
