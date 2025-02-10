@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8cd182f1-0d68-48c4-8a02-1200ed43c496" name="Changes" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/deploy-eks.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/deploy-eks.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/pipeline.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/pipeline.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/deployment-notify-frame-flow.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deployment-notify-frame-flow.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +68,7 @@
     &quot;Maven.fiap-notifyframeflow [install].executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Merging master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.preview.features.used&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/dev/java projects/FrameFlowProject/fiap-notifyframeflow&quot;,
@@ -89,6 +87,7 @@
       <recent name="C:\dev\java projects\fiap-notifyframeflow\src\main\java\com\fiap\video\config" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.fiap.video.infraestructure.config" />
       <recent name="com.fiap.video.core.utils" />
       <recent name="com.fiap.video.infraestructure.service" />
       <recent name="com.fiap.video.core.application.exception" />
@@ -98,7 +97,7 @@
       <recent name="com.fiap.video.infraestructure.listener" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CompletedEmailUseCaseTest">
+  <component name="RunManager">
     <configuration name="All in notifyframeflow" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="notifyframeflow" />
       <option name="PACKAGE_NAME" value="" />
@@ -170,9 +169,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.video in fiap-notifyframeflow" />
         <item itemvalue="JUnit.CompletedEmailUseCaseTest" />
         <item itemvalue="JUnit.UseCaseConfigTest" />
-        <item itemvalue="JUnit.video in fiap-notifyframeflow" />
         <item itemvalue="JUnit.All in notifyframeflow" />
         <item itemvalue="JUnit.CompletedEmailUseCaseTest.shouldSendEmailWithAttachmentWhenVideoProcessingIsCompleted" />
       </list>
@@ -203,37 +202,37 @@
     <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/fiap_notifyframeflow$config_in_fiap_notifyframeflow.ic" NAME="config in fiap-notifyframeflow Coverage Results" MODIFIED="1739108833993" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
-    <SUITE FILE_PATH="coverage/fiap_notifyframeflow$EmailServiceTest.ic" NAME="EmailServiceTest Coverage Results" MODIFIED="1738977981014" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
-      <FILTER>com.fiap.video.infraestructure.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/fiap_notifyframeflow$All_in_notifyframeflow__1_.ic" NAME="All in notifyframeflow (1) Coverage Results" MODIFIED="1739133334874" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
-    <SUITE FILE_PATH="coverage/fiap_notifyframeflow$ErrorEmailUseCaseTest.ic" NAME="ErrorEmailUseCaseTest Coverage Results" MODIFIED="1738977526291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
-      <FILTER>com.fiap.video.core.application.usecases.*</FILTER>
-    </SUITE>
+    <SUITE FILE_PATH="coverage/fiap_notifyframeflow$All_in_notifyframeflow__2_.ic" NAME="All in notifyframeflow (2) Coverage Results" MODIFIED="1739133743698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/fiap_notifyframeflow$infraestructure_in_fiap_notifyframeflow.ic" NAME="infraestructure in fiap-notifyframeflow Coverage Results" MODIFIED="1738978086602" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/fiap_notifyframeflow$FileToByteArrayTest.ic" NAME="FileToByteArrayTest Coverage Results" MODIFIED="1738978265461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.fiap.video.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/fiap_notifyframeflow$java_in_fiap_notifyframeflow.ic" NAME="java in fiap-notifyframeflow Coverage Results" MODIFIED="1739061108254" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
-    <SUITE FILE_PATH="coverage/fiap_notifyframeflow$All_in_notifyframeflow__3_.ic" NAME="All in notifyframeflow (3) Coverage Results" MODIFIED="1739133878316" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/fiap_notifyframeflow$S3ConfigTest.ic" NAME="S3ConfigTest Coverage Results" MODIFIED="1739108681996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.fiap.video.config.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/fiap_notifyframeflow$com_fiap_video_in_fiap_notifyframeflow.ic" NAME="com.fiap.video in fiap-notifyframeflow Coverage Results" MODIFIED="1738977058002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
-      <FILTER>com.fiap.video.*</FILTER>
+    <SUITE FILE_PATH="coverage/fiap_notifyframeflow$java_in_fiap_notifyframeflow.ic" NAME="java in fiap-notifyframeflow Coverage Results" MODIFIED="1739130619520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/fiap_notifyframeflow$ErrorEmailUseCaseTest.ic" NAME="ErrorEmailUseCaseTest Coverage Results" MODIFIED="1738977526291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.fiap.video.core.application.usecases.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/fiap_notifyframeflow$All_in_notifyframeflow__3_.ic" NAME="All in notifyframeflow (3) Coverage Results" MODIFIED="1739133878316" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/fiap_notifyframeflow$All_in_notifyframeflow__5_.ic" NAME="All in notifyframeflow (5) Coverage Results" MODIFIED="1739132533545" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/fiap_notifyframeflow$CompletedEmailUseCaseTest.ic" NAME="CompletedEmailUseCaseTest Coverage Results" MODIFIED="1738977305437" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.fiap.video.core.application.usecases.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/fiap_notifyframeflow$All_in_notifyframeflow__1_.ic" NAME="All in notifyframeflow (1) Coverage Results" MODIFIED="1739133334874" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/fiap_notifyframeflow$All_in_notifyframeflow.ic" NAME="All in notifyframeflow Coverage Results" MODIFIED="1739132752250" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
-    <SUITE FILE_PATH="coverage/fiap_notifyframeflow$All_in_fiap_notifyframeflow.ic" NAME="All in fiap-notifyframeflow Coverage Results" MODIFIED="1738978711227" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
-    <SUITE FILE_PATH="coverage/fiap_notifyframeflow$All_in_notifyframeflow__5_.ic" NAME="All in notifyframeflow (5) Coverage Results" MODIFIED="1739132533545" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/fiap_notifyframeflow$config_in_fiap_notifyframeflow.ic" NAME="config in fiap-notifyframeflow Coverage Results" MODIFIED="1739108833993" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/fiap_notifyframeflow$com_fiap_video_in_fiap_notifyframeflow.ic" NAME="com.fiap.video in fiap-notifyframeflow Coverage Results" MODIFIED="1738977058002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.fiap.video.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/fiap_notifyframeflow$SQSSubscriberTest.ic" NAME="SQSSubscriberTest Coverage Results" MODIFIED="1738977855986" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.fiap.video.infrastructure.subscriber.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/fiap_notifyframeflow$All_in_fiap_notifyframeflow.ic" NAME="All in fiap-notifyframeflow Coverage Results" MODIFIED="1738978711227" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/fiap_notifyframeflow$EmailServiceTest.ic" NAME="EmailServiceTest Coverage Results" MODIFIED="1738977981014" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.fiap.video.infraestructure.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/fiap_notifyframeflow$All_in_notifyframeflow__4_.ic" NAME="All in notifyframeflow (4) Coverage Results" MODIFIED="1739133631830" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
-    <SUITE FILE_PATH="coverage/fiap_notifyframeflow$video_in_fiap_notifyframeflow.ic" NAME="video in fiap-notifyframeflow Coverage Results" MODIFIED="1739109574658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
-    <SUITE FILE_PATH="coverage/fiap_notifyframeflow$All_in_notifyframeflow__2_.ic" NAME="All in notifyframeflow (2) Coverage Results" MODIFIED="1739133743698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/fiap_notifyframeflow$video_in_fiap_notifyframeflow.ic" NAME="video in fiap-notifyframeflow Coverage Results" MODIFIED="1739137297214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>
