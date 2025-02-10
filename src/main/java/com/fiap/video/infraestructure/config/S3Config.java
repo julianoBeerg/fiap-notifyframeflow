@@ -32,7 +32,7 @@ public class S3Config {
     @Getter
     @Value("${aws.region}")
 
-    private final String regionName = Region.US_EAST_1.toString();
+    private final String regionName = "us-east-1";
 
     @Bean
     public S3Client getS3Client() {

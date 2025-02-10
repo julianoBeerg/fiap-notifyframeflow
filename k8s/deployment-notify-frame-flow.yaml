@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
         - name: notify-frame-flow
-          image: 090111931170.dkr.ecr.us-east-1.amazonaws.com/frameflow-ecr
+          image: 090111931170.dkr.ecr.us-east-1.amazonaws.com/notify-frame-flow
           imagePullPolicy: IfNotPresent
           resources:
             requests:
@@ -74,7 +74,7 @@ spec:
           livenessProbe:
             httpGet:
               path: /manage/health
-              port: 80
+              port: 8787
               httpHeaders:
                 - name: Custom-Header
                   value: Awesome
@@ -85,7 +85,7 @@ spec:
           readinessProbe:
             httpGet:
               path: /manage/health
-              port: 80
+              port: 8787
             initialDelaySeconds: 100
             periodSeconds: 10
             timeoutSeconds: 5

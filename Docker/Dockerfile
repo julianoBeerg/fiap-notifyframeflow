@@ -21,7 +21,7 @@ WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
 
   # Expose the application port (adjust if necessary)
-EXPOSE 80
+EXPOSE 8787
 
   # Set the entry point to run the Spring Boot application
 ENTRYPOINT ["java", "-jar", "app.jar"]
@@ -29,5 +29,5 @@ ENTRYPOINT ["java", "-jar", "app.jar"]
 
 ##Instructions:
 ## From project root:
-##docker build -f Docker/Dockerfile -t 51-burguer-app .
+##docker build -f Docker/Dockerfile -t notify-frame-flow .
 ##docker-compose -f Docker/docker-compose.yml up
