@@ -74,3 +74,4 @@ A solução será baseada em uma arquitetura escalável e distribuída, garantin
 ### 📩 Notificação de Status
 1. Notificação de status de erro/sucesso da requisição por e-mail.
 
+
